@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Mobile Console Viewer - 手机调试神器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>📱 Mobile Console Viewer</h1>
+            <p>手机端调试神器 | 实时捕获所有日志</p>
+            <div class="badge-container">
+                <span class="badge">v1.0.0</span>
+                <span class="badge">GitHub Developer Program</span>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>🎮 测试按钮</h3>
+            <div class="button-group">
+                <button class="test-btn log" id="testLog">📝 普通日志</button>
+                <button class="test-btn error" id="testError">❌ 错误日志</button>
+                <button class="test-btn warn" id="testWarn">⚠️ 警告日志</button>
+                <button class="test-btn info" id="testInfo">ℹ️ 信息日志</button>
+                <button class="test-btn" id="testObject">📦 输出对象</button>
+                <button class="test-btn" id="testArray">📊 输出数组</button>
+            </div>
+            <p class="hint">💡 提示：点击下方控制台标题栏可以展开/收起</p>
+        </div>
+
+        <div class="info-section">
+            <h3>📖 使用说明</h3>
+            <ul>
+                <li>✅ 自动捕获所有 console.log/error/warn/info</li>
+                <li>✅ 支持对象、数组等复杂数据类型</li>
+                <li>✅ 每条日志带时间戳</li>
+                <li>✅ 可导出日志文件</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="console-panel" id="consolePanel">
+        <div class="console-header" id="consoleHeader">
+            <div class="console-title">
+                🖥️ 调试控制台
+                <span class="badge" id="logCount">0</span>
+            </div>
+            <div class="console-controls">
+                <button id="clearBtn">🗑️ 清空</button>
+                <button id="exportBtn">📎 导出</button>
+            </div>
+        </div>
+        <div class="console-logs" id="consoleLogs">
+            <div class="empty-state">✨ 暂无日志<br>点击上方按钮测试</div>
+        </div>
+    </div>
+
+    <script src="js/console-viewer.js"></script>
+</body>
+</html>
